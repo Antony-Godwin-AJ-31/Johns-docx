@@ -751,10 +751,5 @@ body {
 
   .stamp-paper-spacer {
     height: 5.2in !important;
-    border-bottom: none !important;
-  }
-
-  .stamp-paper-spacer::after {
-    content: "" !important;
   }
 }
