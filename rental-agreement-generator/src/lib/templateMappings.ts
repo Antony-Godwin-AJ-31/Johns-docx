@@ -115,3 +115,14 @@ export function getEffectiveSalutation(
   }
   return salutation;
 }
+
+export function getRenterRelationship(
+  renterSalutation: SalutationOption,
+  lang: 'english' | 'tamil' = 'english'
+): string {
+  if (lang === 'tamil') {
+    return renterSalutation === 'Mr.' ? 'மகன்' : 'மகள்';
+  }
+  return renterSalutation === 'Mr.' ? 'son' : 'daughter';
+}
+

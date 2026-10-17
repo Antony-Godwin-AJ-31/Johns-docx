@@ -4,6 +4,7 @@ import {
   formatTamilDate,
   getEffectiveFloor,
   getEffectiveSalutation,
+  getRenterRelationship,
 } from '../lib/templateMappings';
 
 describe('templateMappings and localization', () => {
@@ -50,6 +51,21 @@ describe('templateMappings and localization', () => {
     it('keeps salutations in English for English document', () => {
       expect(getEffectiveSalutation('Mr.', 'english')).toBe('Mr.');
       expect(getEffectiveSalutation('Mrs.', 'english')).toBe('Mrs.');
+      expect(getEffectiveSalutation('Ms.', 'english')).toBe('Ms.');
+    });
+  });
+
+  describe('renter relationship translation', () => {
+    it('returns மகன் for Mr. in Tamil and son in English', () => {
+      expect(getRenterRelationship('Mr.', 'tamil')).toBe('மகன்');
+      expect(getRenterRelationship('Mr.', 'english')).toBe('son');
+    });
+
+    it('returns மகள் for Mrs. and Ms. in Tamil and daughter in English', () => {
+      expect(getRenterRelationship('Mrs.', 'tamil')).toBe('மகள்');
+      expect(getRenterRelationship('Ms.', 'tamil')).toBe('மகள்');
+      expect(getRenterRelationship('Mrs.', 'english')).toBe('daughter');
+      expect(getRenterRelationship('Ms.', 'english')).toBe('daughter');
     });
   });
 });

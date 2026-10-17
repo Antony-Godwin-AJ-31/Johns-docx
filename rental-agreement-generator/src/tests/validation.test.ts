@@ -14,6 +14,7 @@ describe('validation', () => {
     renterName: 'மு. கார்த்திக்',
     renterAge: '30',
     renterAddress: 'No. 45, Gandhi Street, Madurai - 625001',
+    parentSalutation: 'Mr.',
     parentName: 'கே. முருகன்',
     propertyAddress: 'No. 12, 1st Cross, Anna Nagar, Chennai - 600040',
     houseFloor: 'First Floor',

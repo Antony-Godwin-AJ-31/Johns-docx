@@ -59,7 +59,7 @@ def create_english_template(output_path):
     p2.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     p2.paragraph_format.line_spacing = 1.3
     p2.paragraph_format.space_after = Pt(14)
-    r2 = p2.add_run("and {RENTER_SALUTATION} {RENTER_NAME}, aged {RENTER_AGE}, son/daughter of {PARENT_NAME}, residing at {RENTER_ADDRESS}, hereinafter referred to as the Second Party (Tenant),")
+    r2 = p2.add_run("and {RENTER_SALUTATION} {RENTER_NAME}, aged {RENTER_AGE}, {RELATIONSHIP_EN} of {PARENT_SALUTATION} {PARENT_NAME}, residing at {RENTER_ADDRESS}, hereinafter referred to as the Second Party (Tenant),")
     r2.font.name = "Times New Roman"
     r2.font.size = Pt(11)
     
@@ -377,7 +377,7 @@ def create_tamil_template(output_path):
     p2.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     p2.paragraph_format.line_spacing = 1.35
     p2.paragraph_format.space_after = Pt(14)
-    r2 = p2.add_run("{RENTER_ADDRESS} என்ற முகவரியில் வசித்து வரும் {RENTER_SALUTATION_TA} {RENTER_NAME}, வயது {RENTER_AGE}, {PARENT_NAME} அவர்களின் மகன்/மகள் ஆகிய இவர் இரண்டாம் தரப்பினராகவும்.")
+    r2 = p2.add_run("{RENTER_ADDRESS} என்ற முகவரியில் வசித்து வரும் {RENTER_SALUTATION_TA} {RENTER_NAME}, வயது {RENTER_AGE}, {PARENT_SALUTATION_TA} {PARENT_NAME} அவர்களின் {RELATIONSHIP_TA} ஆகிய இவர் இரண்டாம் தரப்பினராகவும்.")
     r2.font.name = font_name
     r2.font.size = Pt(11)
     

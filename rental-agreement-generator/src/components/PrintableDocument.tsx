@@ -55,7 +55,7 @@ export const PrintableDocument: React.FC<PrintableDocumentProps> = ({
                   On {data.AGREEMENT_DATE}, Mr. {data.OWNER_NAME}, aged {data.OWNER_AGE}, residing at {data.OWNER_ADDRESS}, hereinafter referred to as the First Party (House Owner),
                 </p>
                 <p className="doc-para">
-                  and {data.RENTER_SALUTATION} {data.RENTER_NAME}, aged {data.RENTER_AGE}, son/daughter of {data.PARENT_NAME}, residing at {data.RENTER_ADDRESS}, hereinafter referred to as the Second Party (Tenant),
+                  and {data.RENTER_SALUTATION} {data.RENTER_NAME}, aged {data.RENTER_AGE}, {data.RELATIONSHIP_EN} of {data.PARENT_SALUTATION} {data.PARENT_NAME}, residing at {data.RENTER_ADDRESS}, hereinafter referred to as the Second Party (Tenant),
                 </p>
               </div>
 
@@ -162,7 +162,7 @@ export const PrintableDocument: React.FC<PrintableDocumentProps> = ({
                   {data.AGREEMENT_DATE_TA} தேதி, {data.OWNER_ADDRESS} என்ற முகவரியில் வசித்து வரும் திரு. {data.OWNER_NAME}, வயது {data.OWNER_AGE}, முதல் தரப்பினராகவும் வீட்டு உரிமையாளர்,
                 </p>
                 <p className="doc-para">
-                  {data.RENTER_ADDRESS} என்ற முகவரியில் வசித்து வரும் {data.RENTER_SALUTATION_TA} {data.RENTER_NAME}, வயது {data.RENTER_AGE}, {data.PARENT_NAME} அவர்களின் மகன்/மகள் ஆகிய இவர் இரண்டாம் தரப்பினராகவும்.
+                  {data.RENTER_ADDRESS} என்ற முகவரியில் வசித்து வரும் {data.RENTER_SALUTATION_TA} {data.RENTER_NAME}, வயது {data.RENTER_AGE}, {data.PARENT_SALUTATION_TA} {data.PARENT_NAME} அவர்களின் {data.RELATIONSHIP_TA} ஆகிய இவர் இரண்டாம் தரப்பினராகவும்.
                 </p>
               </div>
 

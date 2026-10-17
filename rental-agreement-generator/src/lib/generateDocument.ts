@@ -17,6 +17,7 @@ import {
   formatTamilDate,
   getEffectiveFloor,
   getEffectiveSalutation,
+  getRenterRelationship,
 } from './templateMappings';
 import { parseAmount } from './validation';
 
@@ -47,6 +48,8 @@ export function buildTemplateData(
       RENTER_SALUTATION: getEffectiveSalutation(formData.renterSalutation, 'english'),
       RENTER_NAME: formData.renterName.trim(),
       RENTER_AGE: formData.renterAge.trim(),
+      RELATIONSHIP_EN: getRenterRelationship(formData.renterSalutation, 'english'),
+      PARENT_SALUTATION: getEffectiveSalutation(formData.parentSalutation, 'english'),
       PARENT_NAME: formData.parentName.trim(),
       RENTER_ADDRESS: formData.renterAddress.trim(),
       PROPERTY_ADDRESS: formData.propertyAddress.trim(),
@@ -67,6 +70,8 @@ export function buildTemplateData(
       RENTER_SALUTATION_TA: getEffectiveSalutation(formData.renterSalutation, 'tamil'),
       RENTER_NAME: formData.renterName.trim(),
       RENTER_AGE: formData.renterAge.trim(),
+      RELATIONSHIP_TA: getRenterRelationship(formData.renterSalutation, 'tamil'),
+      PARENT_SALUTATION_TA: getEffectiveSalutation(formData.parentSalutation, 'tamil'),
       PARENT_NAME: formData.parentName.trim(),
       RENTER_ADDRESS: formData.renterAddress.trim(),
       PROPERTY_ADDRESS: formData.propertyAddress.trim(),

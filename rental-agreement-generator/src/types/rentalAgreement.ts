@@ -34,6 +34,7 @@ export interface RentalFormData {
   renterName: string;
   renterAge: string;
   renterAddress: string;
+  parentSalutation: SalutationOption;
   parentName: string;
 
   // Section C: Rental Property Details
@@ -60,6 +61,7 @@ export const INITIAL_FORM_DATA: RentalFormData = {
   renterName: '',
   renterAge: '',
   renterAddress: '',
+  parentSalutation: 'Mr.',
   parentName: '',
   propertyAddress: '',
   houseFloor: '',
